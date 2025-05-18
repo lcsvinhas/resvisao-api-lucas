@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "d80b2ff8-b6c3-49e9-a0b8-1774635a881d",
+		"name": "revisaoLucas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44891897",
+		"_collection_link": "https://lucasvinhas-7292255.postman.co/workspace/API-2025-1~ec89fb4b-1246-402d-9b10-895998469ea9/collection/44891897-d80b2ff8-b6c3-49e9-a0b8-1774635a881d?action=share&source=collection_link&creator=44891897"
+	},
+	"item": [
+		{
+			"name": "listar bandas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bandas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bandas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar banda",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 500,\r\n    \"nome\": \"Pink Floyd\",\r\n    \"genero\": \"Rock Progressivo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bandas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bandas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar por id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bandas/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bandas",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deletar banda",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 500,\r\n    \"nome\": \"Pink Floyd\",\r\n    \"genero\": \"Rock Progressivo\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/bandas/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bandas",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar banda",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Tears for Fears\",\r\n    \"genero\": \"Alternativa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bandas/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bandas",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "listar por nome",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bandas/nome?nome=Djavan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bandas",
+						"nome"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "Djavan"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
